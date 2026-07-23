@@ -2431,14 +2431,14 @@ body.sidebar-collapsed .menu-label {
 }
 
 .left-menu-nav {
-    gap: 3px !important;
+    gap: 4px !important;
 }
 
 .left-menu-item {
     border-radius: 6px !important;
-    padding: 10ypx 12px !important;
+    padding: 10px 12px !important;
     color: #334155 !important;
-    font-size: 14px !important;
+    font-size: 12px !important;
     font-weight: 700 !important;
     letter-spacing: 0.02em !important;
     transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease !important;
