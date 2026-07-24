@@ -69,7 +69,7 @@ CREATE TABLE `admins` (
 
 LOCK TABLES `admins` WRITE;
 /*!40000 ALTER TABLE `admins` DISABLE KEYS */;
-INSERT INTO `admins` VALUES (1,'Kervie Balolong','Master','delete123','2026-03-25 03:16:22','$2y$10$dxpLXcfRT5xro2lScRogUu5S4OBfLHp/4xkntzyTTocuv/8ThYMEO','active',NULL),(2,'MasterAdmin','Master','admin123','2026-04-21 01:22:27','$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi','active',NULL),(3,'William Reynold','Staff','william123','2026-03-29 11:41:54','$2y$10$IdRFDkeJ02430e7Oy0X6t.JHRIRORQ.2pCne7Yk8of4TlCWENcnai','active',NULL),(4,'Leyn','Master','leyn123','2026-07-08 00:04:14','$2b$12$mFmOGp8YTIR8hnMKLSCmBO7NWJBS9.M.WfAMxxZ9mny4VVD6SVE.W','active',NULL),(5,'Catherine','Master','cath123','2026-07-09 02:00:40','$2b$12$EvBy28xjbS.f6WU9.e2FYu3QD8iXP6Dq.7y2Sixl6f33n/qhkwPjq','active','catherine.jpg'),(6,'hellnah','Master','12345','2026-06-19 00:30:38','$2y$10$B4rS11up9hEOmvHGbYXsy.4KVsyCv0TjqACkKZwKq.QB5FwbScKNy','active',NULL),(7,'JanaDulog','Master','123456','2026-07-09 06:20:43','$2y$10$32Xlf1mX9x9/J9WaIdwn6eAoCQrbK3SRMfWv55bCXo.9j7VJ8Sg6u','active',NULL),(8,'josh123','Master','123','2026-07-24 01:16:05','$2y$10$BldYPp/j5K3Nm.W0cWANWO8fjOThVnjPPjdiC.nkIMnA0OZKHRHKa','active',NULL);
+INSERT INTO `admins` VALUES (1,'Kervie Balolong','Master','delete123','2026-03-25 03:16:22','$2y$10$dxpLXcfRT5xro2lScRogUu5S4OBfLHp/4xkntzyTTocuv/8ThYMEO','active',NULL),(2,'MasterAdmin','Master','admin123','2026-04-21 01:22:27','$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi','active',NULL),(3,'William Reynold','Staff','william123','2026-03-29 11:41:54','$2y$10$IdRFDkeJ02430e7Oy0X6t.JHRIRORQ.2pCne7Yk8of4TlCWENcnai','active',NULL),(4,'Leyn','Master','leyn123','2026-07-08 00:04:14','$2b$12$mFmOGp8YTIR8hnMKLSCmBO7NWJBS9.M.WfAMxxZ9mny4VVD6SVE.W','active',NULL),(5,'Catherine','Master','cath123','2026-07-09 02:00:40','$2b$12$EvBy28xjbS.f6WU9.e2FYu3QD8iXP6Dq.7y2Sixl6f33n/qhkwPjq','active','catherine.jpg'),(6,'hellnah','Master','12345','2026-06-19 00:30:38','$2y$10$B4rS11up9hEOmvHGbYXsy.4KVsyCv0TjqACkKZwKq.QB5FwbScKNy','active',NULL),(7,'JanaDulog','Master','123456','2026-07-09 06:20:43','$2y$10$32Xlf1mX9x9/J9WaIdwn6eAoCQrbK3SRMfWv55bCXo.9j7VJ8Sg6u','active',NULL),(8,'josh123','Master','123','2026-07-24 01:20:19','$2y$10$BldYPp/j5K3Nm.W0cWANWO8fjOThVnjPPjdiC.nkIMnA0OZKHRHKa','active',NULL);
 /*!40000 ALTER TABLE `admins` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -305,4 +305,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-07-24  9:16:39
+-- Dump completed on 2026-07-24  9:40:50
