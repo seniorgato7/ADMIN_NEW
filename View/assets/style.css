@@ -2207,6 +2207,38 @@ body,
     color: #334155 !important;
 }
 
+.audit-pagination {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 0 0;
+    color: var(--muted);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.audit-pagination button {
+    border: 1px solid var(--border);
+    background: #ffffff;
+    color: var(--ink);
+    border-radius: 6px;
+    padding: 7px 12px;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.audit-pagination button:hover:not(:disabled) {
+    background: var(--orange-soft);
+    color: var(--orange);
+}
+
+.audit-pagination button:disabled {
+    cursor: not-allowed;
+    opacity: 0.45;
+}
+
 .status-inactive {
     background-color: #f1f5f9 !important;
     color: #475569 !important;
@@ -2816,6 +2848,99 @@ body.sidebar-collapsed .menu-label {
     }
 }
 
+/* Mobile sidebar: collapsed state stays visible as an icon rail, like desktop. */
+@media (max-width: 768px) {
+    .left-menu,
+    body.sidebar-collapsed .left-menu {
+        width: 66px !important;
+        padding: 14px 8px !important;
+        transform: translateX(0) !important;
+        box-shadow: 5px 0 18px rgba(98, 54, 16, 0.1) !important;
+        z-index: 1300 !important;
+    }
+
+    body:not(.sidebar-collapsed) .left-menu {
+        width: min(82vw, 250px) !important;
+        padding: 22px 18px !important;
+        transform: translateX(0) !important;
+        box-shadow: 12px 0 30px rgba(15, 23, 42, 0.18) !important;
+    }
+
+    body.sidebar-collapsed .left-menu-header,
+    body.sidebar-collapsed .left-menu-item {
+        justify-content: center !important;
+    }
+
+    body.sidebar-collapsed .left-menu-header {
+        margin-bottom: 18px !important;
+    }
+
+    body.sidebar-collapsed .sidebar-logo {
+        width: 42px !important;
+        height: 42px !important;
+    }
+
+    body.sidebar-collapsed .left-menu-item {
+        width: 50px !important;
+        min-height: 46px !important;
+        padding: 10px 0 !important;
+        font-size: 0 !important;
+    }
+
+    body.sidebar-collapsed .menu-icon {
+        width: 24px !important;
+        height: 24px !important;
+    }
+
+    body.sidebar-collapsed .imperial-brand-text,
+    body.sidebar-collapsed .menu-label {
+        display: none !important;
+    }
+
+    .topbar,
+    body.sidebar-collapsed .topbar {
+        margin-left: 66px !important;
+        width: calc(100% - 66px) !important;
+    }
+
+    .main-content,
+    body.sidebar-collapsed .main-content {
+        margin-left: 66px !important;
+        width: calc(100% - 66px) !important;
+    }
+
+    body:not(.sidebar-collapsed) .topbar,
+    body:not(.sidebar-collapsed) .main-content {
+        margin-left: 66px !important;
+        width: calc(100% - 66px) !important;
+    }
+
+    .topbar-date {
+        min-width: 0;
+        font-size: 11px !important;
+        line-height: 1.15;
+    }
+
+    .topbar-date span {
+        white-space: normal;
+    }
+
+    .topbar-welcome {
+        max-width: 92px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .topbar-user-area {
+        gap: 8px !important;
+    }
+
+    .topbar-avatar-btn {
+        width: 34px !important;
+        height: 34px !important;
+    }
+}
+
 @media (max-width: 480px) {
     .topbar-title {
         gap: 8px !important;
@@ -3298,14 +3423,6 @@ body.sidebar-collapsed .menu-label {
     color: white;
 }
 
-#solarEditModal {
-    z-index: 10020 !important;
-}
-
-#solarPartEditModal {
-    z-index: 10030 !important;
-}
-
 .solar-progress-label-row {
     display: flex;
     justify-content: space-between;
@@ -3567,40 +3684,10 @@ body.sidebar-collapsed .menu-label {
     margin: 14px 0 10px;
 }
 
-.solar-net-metering-icon{
-    display:inline-block;
-    margin-left:6px;
-    color:#16a34a;
-    font-size:20px;
-    font-weight:700;
-    vertical-align:middle;
-}
-
 .solar-installed-wrap {
     display: inline-flex;
     align-items: center;
     gap: 6px;
-}
-
-.solar-net-metering-icon {
-    color: #16a34a;
-    font-size: 22px;
-    font-weight: 800;
-    line-height: 1;
-}
-
-.solar-progress-badge{
-    display:flex;
-    align-items:flex-end;
-    gap:4px;
-}
-
-.solar-net-metering-icon{
-    color:#16a34a;
-    font-size:24px;
-    font-weight:700;
-    margin-left:4px;
-    margin-bottom:2px;
 }
 
 .solar-progress-badge {
@@ -3617,8 +3704,12 @@ body.sidebar-collapsed .menu-label {
 }
 
 .solar-net-metering-icon {
+    display: inline-block;
     color: #16a34a !important;
     font-size: 24px;
     font-weight: 800;
     line-height: 1;
+    margin-left: 4px;
+    margin-bottom: 2px;
+    vertical-align: middle;
 }

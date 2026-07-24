@@ -880,7 +880,7 @@ function insert_audit_log($conn, $admin_name, $action_type, $module, $details) {
             </select>
         </div>
 
-        <button onclick="filterAuditLog()" class="btn-load" style="height: 35px; padding: 0 20px; font-size: 11px;">Reset View</button>
+        <button onclick="resetAuditFilters()" class="btn-load" style="height: 35px; padding: 0 20px; font-size: 11px;">Reset View</button>
     </div>
     <div class="audit-table-wrapper">
         <table class="audit-log-table" id="auditLogTable">
@@ -1197,7 +1197,7 @@ function insert_audit_log($conn, $admin_name, $action_type, $module, $details) {
 
         <div style="display:flex; gap:10px;">
             <button type="button" onclick="closeConfirmProfileModal()" style="flex:1; padding:9px 12px; font-size:13px; background:#334155; color:#f8fafc; border:none; border-radius:8px; cursor:pointer; font-weight:700;">CANCEL</button>
-<button type="button" onclick="submitProfileChanges()" id="confirmProfileSaveBtn" style="flex:1; padding:px 12px; font-size:13px; background:#d49006; color:#0f172a; border:none; border-radius:8px; cursor:pointer; font-weight:700;">SAVE CHANGES</button>
+<button type="button" onclick="submitProfileChanges()" id="confirmProfileSaveBtn" style="flex:1; padding:9px 12px; font-size:13px; background:#d49006; color:#0f172a; border:none; border-radius:8px; cursor:pointer; font-weight:700;">SAVE CHANGES</button>
         </div>
     </div>
 </div>

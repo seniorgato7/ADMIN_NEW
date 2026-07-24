@@ -6,6 +6,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const sections = document.querySelectorAll('.app-page');
     const sidebar = document.getElementById('leftMenu');
     const sidebarToggle = document.getElementById('sidebarToggle');
+    const mobileBreakpoint = 768;
+    const isMobile = () => window.innerWidth <= mobileBreakpoint;
 
     function setSidebarCollapsed(isCollapsed) {
         if (!sidebar) return;
@@ -60,6 +62,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Switch the page
             showPage(targetPage);
+
+            if (isMobile()) {
+                setSidebarCollapsed(true);
+            }
         });
     });
 
@@ -79,5 +85,13 @@ document.addEventListener('DOMContentLoaded', () => {
     // Load the saved page on startup
     showPage(savedPage);
 
-    setSidebarCollapsed(localStorage.getItem('imperial_sidebar_collapsed') === '1');
+    const savedCollapsed = localStorage.getItem('imperial_sidebar_collapsed');
+    const defaultCollapsed = isMobile(); // icon rail by default sa mobile
+    setSidebarCollapsed(isMobile() ? true : (savedCollapsed === null ? defaultCollapsed : savedCollapsed === '1'));
+
+    window.addEventListener('resize', () => {
+        if (isMobile()) {
+            setSidebarCollapsed(true);
+        }
+    });
 });

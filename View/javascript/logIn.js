@@ -4,8 +4,7 @@
 
 document.addEventListener('DOMContentLoaded', () => {
     const loginForm = document.querySelector('.login-form');
-    const loginBtn = document.querySelector('.login-btn');
-    const passwordInput = document.querySelector('input[name="password"]');
+    const loginBtn = document.querySelector('.btn-primary');
 
     // 1. Inject Loader Styles and Modal HTML automatically
     const injectAuthModal = () => {
@@ -13,8 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const modalDiv = document.createElement('div');
         modalDiv.id = 'authModal';
-        
-        // Modal Overlay Styles
+
         Object.assign(modalDiv.style, {
             display: 'none',
             position: 'fixed',
@@ -49,27 +47,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     injectAuthModal();
 
-    // 2. Password Visibility Toggle
-    if (passwordInput) {
-        const passGroup = passwordInput.parentElement;
-        passGroup.style.position = 'relative';
-        const toggleBtn = document.createElement('span');
-        toggleBtn.innerHTML = '👁️'; 
-        toggleBtn.style.cssText = `
-            position: absolute; right: 15px; top: 50%; transform: translateY(-50%);
-            cursor: pointer; font-size: 14px; opacity: 0.6; z-index: 10; color: #94a3b8;
-        `;
-        toggleBtn.addEventListener('click', () => {
-            const isPass = passwordInput.getAttribute('type') === 'password';
-            passwordInput.setAttribute('type', isPass ? 'text' : 'password');
-            toggleBtn.innerHTML = isPass ? '🔒' : '👁️';
-        });
-        passGroup.appendChild(toggleBtn);
-    }
-
-    // 3. Form Submission Handling
+    // 2. Form Submission Handling
     if (loginForm) {
-        loginForm.addEventListener('submit', (e) => {
+        loginForm.addEventListener('submit', () => {
             const authModal = document.getElementById('authModal');
             if (authModal) {
                 authModal.style.display = 'flex';
@@ -82,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 4. Subtle Input Animations
+    // 3. Subtle Input Animations
     const inputs = document.querySelectorAll('.login-form input');
     inputs.forEach(input => {
         input.addEventListener('focus', () => {
